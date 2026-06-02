@@ -1,0 +1,23 @@
+#ver 0.1.0
+#MicroChat
+
+#only for system messages (unused)
+plugin_chat_prefix = "[MicroChat]"
+
+#player_join_message
+#usable placeholders: %player% - player's name
+player_join_message = "§3player §6%player% §3just joined the server!"
+
+#using local chat: true or false
+use_local_chat = "true"
+global_chat_prefix = "§9[Global] §f"
+local_chat_prefix = "§a[Local] §f"
+
+#from this radius in z and y players can hear you in local
+player_chat_radius = 30
+
+#what symbol you need to write in the start for say in global chat
+player_global_message_default_prefix = "!"
+
+
+

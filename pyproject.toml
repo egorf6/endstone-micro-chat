@@ -1,0 +1,11 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "endstone-micro-chat"
+version = "0.1.0"
+description = "Chat plugin for Endstone core"
+
+[project.entry-points."endstone"]
+micro-chat = "endstone_micro_chat:MicroChat"
