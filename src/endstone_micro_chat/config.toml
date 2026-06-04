@@ -1,17 +1,22 @@
 #ver 0.1.0
 #MicroChat
 
+#
+#for colors, you may use & instead of §
+#
+
 #only for system messages (unused)
 plugin_chat_prefix = "[MicroChat]"
 
 #player_join_message
 #usable placeholders: %player% - player's name
-player_join_message = "§3player §6%player% §3just joined the server!"
+player_join_message = ["&3════════════════════════","§3player §6%player% §3just joined the server! %message%"]
 
 #using local chat: true or false
+#%message% - users message
 use_local_chat = "true"
-global_chat_prefix = "§9[Global] §f"
-local_chat_prefix = "§a[Local] §f"
+global_chat_prefix = ["&3════════════════════════","&9[Global] &3 <%player%> &f %message%"]
+local_chat_prefix = ["&3════════════════════════","§a[Local] §3 <%player%> §f %message%"]
 
 #from this radius in z and y players can hear you in local
 player_chat_radius = 30
