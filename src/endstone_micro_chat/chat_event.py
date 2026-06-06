@@ -9,6 +9,8 @@ class ChatEvent:
     def __init__(self, plugin: Plugin) -> None:
         self._plugin = plugin
 
+
+
     @event_handler
     def on_player_chat(self,event: PlayerChatEvent)-> None:
         event.cancel()
@@ -45,3 +47,11 @@ class ChatEvent:
             if msg_player.location.distance(player.location)<= int(self._plugin.config.get("player_chat_radius")):
                 for line in output:
                     player.send_message(line)
+
+    @staticmethod
+    def schedule_broadcast_message(plugin):
+        msg_list = plugin.config.get("broadcast_message","something went wrong with config!")
+        for line in msg_list:
+            line = replace_color_code(line)
+            plugin.server.broadcast_message(line)
+
